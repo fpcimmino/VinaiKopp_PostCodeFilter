@@ -12,6 +12,13 @@ class VinaiKopp_PostCodeFilter_Model_RuleCollection extends Varien_Data_Collecti
      * @var AdminViewsRuleList
      */
     private $useCase;
+    
+    public function __construct($conn=null)
+    {
+        if ( (is_array($conn) && count($conn) > 0)) {
+            parent::__construct($conn);
+        }
+    }
 
     /**
      * @param string $field
